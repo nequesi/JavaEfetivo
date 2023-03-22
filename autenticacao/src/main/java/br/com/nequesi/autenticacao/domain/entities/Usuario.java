@@ -18,10 +18,6 @@ public class Usuario {
     private String senha;
     private Boolean ativo;
 
-//    @Column(length = 75, nullable = false)
-//    @Enumerated(EnumType.STRING)
-//    private Role role;
-
     @ManyToMany
     @JoinTable(name = "usuario_papel",
             joinColumns = @JoinColumn(name = "usuario_id"),

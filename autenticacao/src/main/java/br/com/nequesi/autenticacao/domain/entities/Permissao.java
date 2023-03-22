@@ -13,17 +13,17 @@ public class Permissao {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
+    @Embedded
+    private Condicao condicao;
+
     @Enumerated(EnumType.STRING)
     private TipoOperacao tipo;
-
-    @ManyToMany(mappedBy = "permissoes")
-    private List<Papel> papeis;
 
     @ManyToOne
     private Recurso recurso;
 
-    @Embedded
-    private Condicao condicao;
+    @ManyToMany(mappedBy = "permissoes")
+    private List<Papel> papeis;
 
     // getters e setters
 }

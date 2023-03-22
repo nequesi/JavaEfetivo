@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 
 import java.util.List;
 @Entity
+@Table(name = "tb_recurso")
 public class Recurso {
 
     @Id
