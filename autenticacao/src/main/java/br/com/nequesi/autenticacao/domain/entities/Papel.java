@@ -1,16 +1,22 @@
 package br.com.nequesi.autenticacao.domain.entities;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.util.List;
 
+@Builder
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode
 @Entity
 @Table(name = "tb_papel")
 public class Papel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long PapelId;
 
     private String nome;
 

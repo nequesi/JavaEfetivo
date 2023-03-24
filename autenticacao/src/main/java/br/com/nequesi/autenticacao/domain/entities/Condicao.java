@@ -1,7 +1,12 @@
 package br.com.nequesi.autenticacao.domain.entities;
 
 import jakarta.persistence.Embeddable;
+import lombok.*;
 
+@Builder
+@Data
+
+@EqualsAndHashCode
 @Embeddable
 public class Condicao {
 

@@ -1,15 +1,20 @@
 package br.com.nequesi.autenticacao.domain.entities;
 
 import jakarta.persistence.*;
+import lombok.*;
 
 import java.util.List;
-
-@Entity
+@Builder
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@EqualsAndHashCode
+@Entity @Table(name = "tb_hierarquia_role")
 public class RoleHierarchy {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long roleHierarchyId;
 
     private String nome;
 
