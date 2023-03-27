@@ -15,9 +15,7 @@ public class RoleHierarchy {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long roleHierarchyId;
-
     private String nome;
-
     private String descricao;
 
     @OneToMany(mappedBy = "roleHierarchy", cascade = CascadeType.ALL)
